@@ -1,1 +1,1 @@
-hello word
+positive and negative
