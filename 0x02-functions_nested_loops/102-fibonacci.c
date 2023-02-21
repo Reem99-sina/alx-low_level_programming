@@ -13,7 +13,7 @@ num1 = 1;
 num2 = 2;
 next = num1 + num2;
 printf("%ld, %ld, %ld, ", num1, num2, next);
-for (i = 3; i <= 50; i++)
+for (i = 3; i < 50; i++)
 {
 num1 = num2;
 num2 = next;
