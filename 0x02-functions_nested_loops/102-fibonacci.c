@@ -18,7 +18,14 @@ for (i = 3; i < 50; i++)
 num1 = num2;
 num2 = next;
 next = num1 + num2;
+if (i == 49)
+{
+printf("%ld", next);
+}
+else
+{
 printf("%ld, ", next);
+}
 }
 printf("\n");
 return (0);
