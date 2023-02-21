@@ -7,7 +7,7 @@
 int main(void)
 {
 int num1, num2, next;
-int i, sum;
+int sum;
 
 num1 = 1;
 num2 = 2;
