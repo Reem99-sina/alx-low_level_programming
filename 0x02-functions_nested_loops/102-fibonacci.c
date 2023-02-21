@@ -6,18 +6,19 @@
 */
 int main(void)
 {
-int num1, num2, next, i;
+long num1, num2, next;
+int i;
 
 num1 = 1;
 num2 = 2;
 next = num1 + num2;
-printf("%d, %d, ", num1, num2);
-for (i = 3; i <= 50; ++i)
+printf("%ld, %ld, %ld, ", num1, num2, next);
+for (i = 3; i <= 50; i++)
 {
-printf("%d, ", next);
 num1 = num2;
 num2 = next;
 next = num1 + num2;
+printf("%ld, ", next);
 }
 printf("\n");
 return (0);
