@@ -11,6 +11,7 @@ long i, sum;
 
 num1 = 1;
 num2 = 2;
+sum = 0;
 next = num1 + num2;
 if (next % 2 == 0)
 {
