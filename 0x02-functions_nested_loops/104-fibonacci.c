@@ -13,12 +13,12 @@ num1 = 1;
 num2 = 2;
 next = num1 + num2;
 printf("%lu, %lu, %lu, ", num1, num2, next);
-for (i = 3; i < 99; i++)
+for (i = 3; i < 98; ++i)
 {
 num1 = num2;
 num2 = next;
 next = num1 + num2;
-if (i == 98)
+if (i == 97)
 {
 printf("%lu", next);
 }
