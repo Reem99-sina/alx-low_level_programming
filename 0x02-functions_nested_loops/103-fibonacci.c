@@ -6,8 +6,8 @@
 */
 int main(void)
 {
-long num1, num2, next;
-long i, sum;
+int num1, num2, next;
+int i, sum;
 
 num1 = 1;
 num2 = 2;
@@ -25,7 +25,7 @@ if (num2 % 2 == 0)
 {
 sum += num2;
 }
-for (i = 3; i < 4000000; i++)
+while (next < 4000000)
 {
 num1 = num2;
 num2 = next;
@@ -35,6 +35,6 @@ if (next % 2 == 0)
 sum += next;
 }
 }
-printf("%ld\n", sum);
+printf("%d\n", sum);
 return (0);
 }
