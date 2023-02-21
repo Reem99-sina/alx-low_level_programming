@@ -24,15 +24,15 @@ printf("%d", 0);
 }
 else if (product < 10)
 {
-printf(",  %d", product);
+printf(",   %d", product);
 }
 else if (product >= 100)
 {
-printf(",%d", product);
+printf(", %d", product);
 }
 else
 {
-printf(", %d", product);
+printf(",  %d", product);
 }
 }
 printf("\n");
