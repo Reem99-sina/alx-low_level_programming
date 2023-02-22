@@ -13,17 +13,15 @@ int largest_number(int a, int b, int c)
 int largest;
 
 largest = b;
+
 if (a > b)
 {
 largest = a;
 }
-else if (c > b )
+else if (c > b)
 {
 largest = b;
 }
-else
-{
-largest = c;
-}
+
 return (largest);
 }
