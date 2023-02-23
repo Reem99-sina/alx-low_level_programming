@@ -18,11 +18,11 @@ printf("Fizz");
 }
 else if (i % 3 != 0 && i % 5 == 0)
 {
-printf("Bizz");
+printf("Buzz");
 }
 else if (i % 3 == 0 && i % 5 == 0)
 {
-printf("FizzBizz");
+printf("FizzBuzz");
 }
 else
 {
