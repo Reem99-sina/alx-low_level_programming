@@ -8,10 +8,15 @@
  */
 int main(void)
 {
+char c;
 int num;
 
 srand(time(NULL));
-num = rand();
-printf("%i\n", num);
+while (num <= 2645)
+{
+c = rand() % 128;
+num += c;
+}
+printf("%d\n", 2772 - num);
 return (0);
 }
