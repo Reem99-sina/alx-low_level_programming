@@ -16,7 +16,9 @@ while (num <= 2645)
 {
 c = rand() % 128;
 num += c;
+putchar(c);
 }
-printf("%d\n", 2772 - num);
+putchar(2772 - num);
+putchar('\n');
 return (0);
 }
