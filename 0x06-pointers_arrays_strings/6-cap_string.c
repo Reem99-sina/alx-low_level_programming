@@ -26,6 +26,11 @@ str[i + 1] -= 32;
 break;
 }
 }
+if (str[i] == '\t')
+{
+str[i] = ' ';
+str[i + 1] -= 32;
+}
 }
 }
 return (str);
