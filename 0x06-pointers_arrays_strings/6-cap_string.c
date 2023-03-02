@@ -9,28 +9,19 @@
  */
 char *cap_string(char *str)
 {
-int i, j;
+int i;
 int length = 0;
-int separators[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
 length = strlen(str);
 for (i = 0; i < length; i++)
 {
-for (j = 0; j < 13; j++)
+if (str[i] == '\t' || str[i] == ','|| str[i] == ';'|| str[i] == '!'|| str[i] == '?'|| str[i] == '"'|| str[i] == '('|| str[i] == ')'|| str[i] == '{'|| str[i] == '}' || str[i] == ' ')
 {
-if (str[i] == separators[j])
-{
-if (str[i + 1] >= 97 && str[i + 1] <= 122)
+if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
 {
 str[i + 1] -= 32;
-break;
 }
-}
-if (str[i] == '\t')
-{
 str[i] = ' ';
-str[i + 1] -= 32;
-}
 }
 }
 return (str);
