@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-/**
- *main - add 98 to a[2]
- *Return:0
-*/
 int main(void)
 {
 int n;
