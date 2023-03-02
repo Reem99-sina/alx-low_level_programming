@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-/**
- *main - add a[2]=98 by pointer
- *Return:0
-*/
 int main(void)
 {
 int n;
