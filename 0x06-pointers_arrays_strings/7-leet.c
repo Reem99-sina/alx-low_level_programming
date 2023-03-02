@@ -2,25 +2,23 @@
 
 /**
  * leet - encodes a string into 1337
- *@str: string
- * Return: string
+ * @s: string to encode
+ *
+ * Return: address of s
  */
-char *leet(char *str)
+char *leet(char *s)
 {
-char s[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
-int i;
-int j;
+	int i, j;
+	char a[] = "aAeEoOtTlL";
+	char b[] = "4433007711";
 
-while (str[i])
-{
-for (j = 0; j < 8; j++)
-{
-if (str[i] == s[j] || str[i] - 32 == s[j])
-{
-str[i] = j + '0';
-}
-}
-i++;
-}
-return (str);
+	for (i = 0; *(s + i); i++)
+	{
+		for (j = 0; j <= 9; j++)
+		{
+			if (a[j] == s[i])
+				s[i] = b[j];
+		}
+	}
+	return (s);
 }
