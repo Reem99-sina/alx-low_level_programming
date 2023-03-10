@@ -20,7 +20,7 @@ char *_strpbrk(char *haystack, char *needle)
 		for (i = 0; needle[i]; i++)
 		{
 			if (needle[i] == *haystack)
-				return (haystack);
+				return (haystack + '\n');
 		}
 		haystack++;
 	}
