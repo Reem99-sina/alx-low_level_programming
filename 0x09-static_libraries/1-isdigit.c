@@ -1,22 +1,14 @@
 #include "main.h"
 /**
- *_strncat - concatenate two strings but add inputted number of bytes
- *@dest: string to be appended upon
- *@src: string to be completed at end of dest
- *@n:integer parameter to compare index to
- *Return: returns new concatenated string
- */
+*_isdigit - function that verifies if a  character is a digit or not
+*@c: tested character
+*Return: returns 1 if it is uppercase , 0 if not
+*/
 
-char *_strncat(char *dest, char *src, int n)
+int _isdigit(int c)
 {
+if ((c >= 48) && (c <= 57))
+return (1);
 
-	int index = 0, dest_len = 0;
-
-	while (dest[index++])
-		dest_len++;
-
-	for (index = 0; src[index] && index < n; index++)
-		dest[dest_len++] = src[index];
-
-	return (dest);
+return (0);
 }
