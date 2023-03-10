@@ -4,25 +4,25 @@
 * occurrence in the string s of any of the bytes in
 *the string accept
 *
-*@s: string where search is made
+*@haystack: string where search is made
 *@accept: string where searched bytes are located
 *
 *Return:Returns a pointer to the byte in s that matches
 * one of the bytes in accept, or NULL if no such byte is found
 */
 
-char *_strpbrk(char *s, char *accept)
+char *_strpbrk(char *haystack, char *needle)
 {
 	int i;
 
-	while (*s)
+	while (*haystack)
 	{
-		for (i = 0; accept[i]; i++)
+		for (i = 0; needle[i]; i++)
 		{
-			if (accept[i] == *s)
-				return (s);
+			if (needle[i] == *haystack)
+				return (haystack);
 		}
-		s++;
+		haystack++;
 	}
 
 	return ('\0');
