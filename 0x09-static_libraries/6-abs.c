@@ -7,9 +7,9 @@
 int _abs(int i)
 {
 if (i > 0)
-return (i + '\n');
+return (i);
 else if (i < 0)
-return (-i + '\n');
+return (-i);
 else
-return (0 + '\n');
+return (0);
 }
