@@ -1,0 +1,2 @@
+#!/bin/bash
+ar -cvq libmy.a *.o
