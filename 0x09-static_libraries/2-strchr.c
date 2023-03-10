@@ -17,7 +17,7 @@ for (i = 0; (s[i] != c) && (s[i] != '\0'); i++)
 ;
 if (s[i] == c)
 {
-return (s + i + '\n');
+return (&s[i] + '\n');
 }
 else
 return (NULL);
