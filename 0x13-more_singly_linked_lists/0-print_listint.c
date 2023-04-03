@@ -12,8 +12,8 @@ size_t index = 0;
 while (h)
 {
 index++;
-printf("%d\n",h->n);
-h=h->next;
+printf("%d\n", h->n);
+h = h->next;
 }
 return (index);
 }
