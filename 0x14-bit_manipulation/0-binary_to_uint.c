@@ -1,14 +1,12 @@
 #include "main.h"
 #include <stddef.h>
-
 /**
- * binary_to_uint - Converts a binary number to an unsigned int.
- * @b: A pointer to a string of 0 and 1 chars.
+ * check_valid_string - checks if a string has only 0's and 1's
+ * @b: string to be checked
  *
- * Return: If b is NULL or contains chars not 0 or 1 - 0.
- *         Otherwise - the converted number.
+ * Return: 1 if string is valid, 0 otherwise
  */
-int check_valid_string(const char *b)
+int *check_valid_string(const char *b)
 {
 if (b == NULL)
 return (0);
@@ -21,6 +19,13 @@ b++;
 }
 return (1);
 }
+/**
+ * binary_to_uint - Converts a binary number to an unsigned int.
+ * @b: A pointer to a string of 0 and 1 chars.
+ *
+ * Return: If b is NULL or contains chars not 0 or 1 - 0.
+ *         Otherwise - the converted number.
+ */
 unsigned int binary_to_uint(const char *b)
 {
 unsigned int num = 0;
