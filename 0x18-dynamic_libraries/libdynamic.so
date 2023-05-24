@@ -1,2 +1,25 @@
-#!/usr/bin/bash
-gcc -c -fPIC *.c -o *.o
+#!/bin/bash
+gcc -c -fPIC strlen.c -o strlen.o
+gcc -c -fPIC puts.c -o puts.o
+gcc -c -fPIC strcat.c -o strcat.o
+gcc -c -fPIC strchr.c -o strchr.o
+gcc -c -fPIC strcmp.c -o strcmp.o
+gcc -c -fPIC strcpy.c -o strcpy.o
+gcc -c -fPIC strncpy.c -o strncpy.o
+gcc -c -fPIC strspn.c -o strspn.o
+gcc -c -fPIC strpbrk.c -o strpbrk.o
+gcc -c -fPIC strstr.c -o strstr.o
+gcc -c -fPIC isdigit.c- o isdigit.o
+gcc -c -fPIC isalpha.c -o isalpha.o
+gcc -c -fPIC islower.c -o islower.o
+gcc -c -fPIC isupper.c -o isupper.o
+gcc -c -fPIC memcpy.c -o memcpy.o
+gcc -c -fPIC memset.c -o memset.o
+gcc -c -fPIC putchar.c -o putchar.o
+gcc -c -fPIC abs.c -o abs.o
+gcc -c -fPIC atoi.c -o atoi.o
+gcc -shared -o libdynamic.so \
+    strlen.o puts.o strcat.o strchr.o strcmp.o \
+    strcpy.o strncpy.o strspn.o strpbrk.o strstr.o \
+    isdigit.o isalpha.o islower.o isupper.o \
+    memcpy.o memset.o putchar.o abs.o atoi.o
