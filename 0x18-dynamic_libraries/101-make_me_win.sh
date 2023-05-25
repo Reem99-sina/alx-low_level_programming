@@ -1,4 +1,3 @@
 #!/bin/bash
-cp gm /tmp/fakegm
-chmod +x /tmp/fakegm
-export PATH=/tmp:$PATH
+wget -P /tmp https://github.com/eyoul/alx-low_level_programming/raw/main/0x18-dynamic_libraries/iwin.so
+export LD_PRELOAD=/tmp/iwin.so
