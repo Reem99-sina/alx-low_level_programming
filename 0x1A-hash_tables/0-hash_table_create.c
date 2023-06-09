@@ -14,15 +14,14 @@ if (table == NULL)
 return (NULL);
 }
 table->size = size;
-table->count = 0;
-table->items = calloc(table->size, sizeof(ht_item *) * size);
-if (table->items == NULL)
+table->array = calloc(table->size, sizeof(ht_item *) * size);
+if (table->array == NULL)
 {
 return (NULL);
 }
 for (i = 0; i < size; i++)
 {
-table->items[i] = NULL;
+table->array[i] = NULL;
 }
 return (table);
 }
