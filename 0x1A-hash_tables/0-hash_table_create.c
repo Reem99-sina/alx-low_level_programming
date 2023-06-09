@@ -8,14 +8,14 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 unsigned long int i;
-hash_table_t* table = malloc(sizeof(hash_table_t));
+hash_table_t *table = malloc(sizeof(hash_table_t));
 if (table == NULL)
 {
 return (NULL);
 }
 table->size = size;
 table->count = 0;
-table->items = calloc(table->size, sizeof(ht_item*));
+table->items = calloc(table->size, sizeof(ht_item *) * size);
 if (table->items == NULL)
 {
 return (NULL);
