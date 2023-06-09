@@ -13,8 +13,8 @@ typedef struct ht_item
 } ht_item;
 typedef struct hash_table_t
 {
-    // Contains an array of pointers to items.
-    Ht_item** items;
+    
+    ht_item** items;
     int size;
     int count;
 } hash_table_t;
