@@ -9,13 +9,20 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 unsigned long int i;
 hash_table_t* table = (hash_table_t*) malloc(sizeof(hash_table_t));
+if (table == NULL)
+{
+return (NULL);
+}
 table->size = size;
 table->count = 0;
 table->items = (ht_item**) calloc(table->size, sizeof(ht_item*));
-
+if (table->items == NULL)
+{
+return (NULL);
+}
 for (i = 0; i < size; i++)
 {
 table->items[i] = NULL;
 }
-return table;
+return (table);
 }
