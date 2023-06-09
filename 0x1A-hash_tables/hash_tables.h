@@ -5,12 +5,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+/**
+ * struct ht_item - Node of a hash table
+ *
+ * @key: The key, string
+ * The key is unique in the HashTable
+ * @value: The value corresponding to a key
+ */
 typedef struct ht_item
 {
     char* key;
     char* value;
 } ht_item;
+/**
+ * struct hash_table_t - Hash table data structure
+ *
+ * @size: The size of the array
+ * @items: An array of size @size
+ * @count:count
+ * Each cell of this array is a pointer to the first node of a linked list,
+ * because we want our HashTable to use a Chaining collision handling
+ */
 typedef struct hash_table_t
 {
     
