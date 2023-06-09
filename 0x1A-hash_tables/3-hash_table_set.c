@@ -11,7 +11,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new;
+	ht_item *new;
 	char *value_copy;
 	unsigned long int index, i;
 
@@ -33,7 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 	}
 
-	new = malloc(sizeof(hash_node_t));
+	new = malloc(sizeof(ht_item));
 	if (new == NULL)
 	{
 		free(value_copy);
