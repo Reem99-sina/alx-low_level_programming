@@ -7,20 +7,20 @@
  *@value:value
  *Return:Returns: 1 if it succeeded, 0 otherwise
 */
-char *hash_table_get(const hash_table_t *ht, const char *key)
+char *hash_table_get(hash_table_t *ht, char *key)
 {
 ht_item *node;
 unsigned long int index;
-if (h1 == NULL || key == NULL || key == "\0")
+if (ht == NULL || key == NULL)
 {
 return (NULL);
 }
-index = key_index((const unsigned char *)key, h1->size);
-if (index >= h1->size)
+index = key_index((unsigned char *)key, ht->size);
+if (index >= ht->size)
 {
 return (NULL);
 }
-node = h1->array[index];
+node = ht->array[index];
 while (node && strcmp(node->key, key) != 0)
 {
 node = node->next;
