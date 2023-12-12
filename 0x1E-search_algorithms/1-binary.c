@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include "search_algos.h"
+
+int binary_search(int *array, size_t size, int value)
+{
+size_t startindex;
+size_t end;
+size_t middle;
+size_t i;
+if (array == NULL)
+{
+return -1;
+}
+startindex = 0;
+end = size - 1;
+while(startindex <= end)
+{
+printf("Searching in array: ");
+for (i = startindex; i <= end; ++i)
+{
+printf("%d", array[i]);
+if (i < end)
+{
+printf(", ");
+}
+}
+printf("\n");
+middle = (startindex + end) / 2;
+if (array[middle] == value)
+{
+return middle;
+}
+if (array[middle] > value)
+{
+end = middle - 1;
+}
+else
+{
+startindex = middle + 1;
+}
+}
+return -1;
+}
